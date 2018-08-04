@@ -1,0 +1,2 @@
+class MeseroMeal < ApplicationRecord
+end
