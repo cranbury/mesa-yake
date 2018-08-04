@@ -1,0 +1,2 @@
+class Mesero < ApplicationRecord
+end
