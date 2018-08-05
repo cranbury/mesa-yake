@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
-  <body class="<%=@background_pic%>">
+  <body class="<%=@background_pic%>" style="<%= @bg_img_restaurant ? "background: url(#{@bg_img_restaurant}) no-repeat center center;background-size: auto auto; background-size: cover;" : ""  %>"  >
     <% if @admin %>
       <div class="container text-dark">
         <div class="row">

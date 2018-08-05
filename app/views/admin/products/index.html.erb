@@ -10,10 +10,10 @@
             <th>Status</th>
         </tr>
     </thead>
-    <tbody
+    <tbody>
         <% @products.each do |product|  %>
             <tr>
-                <td>1</td>
+                <td><%= product.id %></td>
                 <td><%= product.name %></td>
                 <td><%= product.description %></td>
                 <td><%= number_to_currency(product.precio) %></td>
