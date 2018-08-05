@@ -17,6 +17,7 @@ class LiveFeedController < ApplicationController
     File.open(Rails.root.join('app', 'assets', 'images', 'restaurante', 'status.jpg'), 'wb') do |file|
       file.write(table_pic.read)
     end
+
     redirect_to live_feed_path(params[:rest_id])
   end
 end
