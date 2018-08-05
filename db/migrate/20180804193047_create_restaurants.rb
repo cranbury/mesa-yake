@@ -33,7 +33,8 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.decimal :precio
-
+      t.integer :restaurant_id
+      
       t.timestamps
     end
 

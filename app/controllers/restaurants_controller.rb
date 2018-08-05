@@ -7,12 +7,14 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-      @background_pic = "restaurantpic"
+    @background_pic = "restaurantpic"
   end
 
   def menu
       @background_pic = "restaurantpic"
-      @products = Product.all
+      @restaurant = Restaurant.find_by(id: params[:restaurant_id])
+      @products = Product.where(restaurant_id: params[:restaurant_id])
+      @bg_img_restaurant = @restaurant.img
   end
   
   def open

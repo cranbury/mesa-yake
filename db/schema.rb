@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_012507) do
     t.string "name"
     t.string "description"
     t.decimal "precio"
+    t.integer "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
