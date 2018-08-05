@@ -6,5 +6,6 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+      @background_pic = "restaurantpic"
   end
 end
