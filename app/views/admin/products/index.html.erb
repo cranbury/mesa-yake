@@ -1,1 +1,26 @@
-idnex.html.erb
+<h2>Products</h2>
+<a href="<%= new_restaurant_admin_product_path %>" class="btn btn-success">Create</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @products.each do |product|  %>
+            <tr>
+                <td><%= product.id %></td>
+                <td><%= product.name %></td>
+                <td><%= product.description %></td>
+                <td><%= number_to_currency(product.precio) %></td>
+                <td>
+                    <span class="badge-secondary badge">Hidden</span>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

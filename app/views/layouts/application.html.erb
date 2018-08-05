@@ -8,8 +8,29 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body class="<%=@background_pic%>">
-    <%= yield %>
+  
+  <body class="<%=@background_pic%>" style="<%= @bg_img_restaurant ? "background: url(#{@bg_img_restaurant}) no-repeat center center;background-size: auto auto; background-size: cover;" : ""  %>"  >
+    <% if @admin %>
+      <div class="container text-dark">
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="list-group">
+              <li class="list-group-item active">Dashboard</li>
+              <li class="list-group-item">Orders</li>
+              <li class="list-group-item">Tables</li>
+              <li class="list-group-item">Waiters</li>
+              <li class="list-group-item">
+                <a href="<%= restaurant_admin_products_path %>">Products</a>
+              </li>
+            </ul> 
+          </div>
+          <div class="col-md-9">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <% else %>
+        <%= yield %>
+      <% end %>
   </body>
 </html>

@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col pt-2">
+            <%= form_for @meal, url: restaurant_meal_path do |f| %>
+                <div class="form-group"><input name="mesa_id" placeholder="Table Code" class="form-control" /></div>
+                <div class="form-gorup"><button class="btn btn-primary btn-lg btn-block" type="submit">Gets</button></div>
+            <% end %>
+        </div>
+    </div>
+</div>
