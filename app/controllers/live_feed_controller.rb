@@ -7,7 +7,7 @@ class LiveFeedController < ApplicationController
   def show
     @rest = Restaurant.find(params[:id])
     @mesas = @rest.mesas
-    @background_pic = "blackpic"
+    @background_pic = "restaurantpic"
   end
 
   def create
@@ -21,8 +21,9 @@ class LiveFeedController < ApplicationController
     end
 
     watson_response = IbmCloud.call("app/assets/images/restaurante/#{@rest.id}/t#{params[:mesa_id]}.jpg")
-    Mesa.find(params[:mesa_id]).update(available: watson_response['images'][0]['classifiers'][0]['classes'][0]['class'] == 'mesas_vacias.zip')
     puts watson_response
+    Mesa.find(params[:mesa_id]).update(available: watson_response['images'][0]['classifiers'][0]['classes'][0]['class'] == 'mesas_vacias.zip')
+    
     # @score = watson_response['images'][0]['classifiers'][0]['classes'][0]['score']
 
     redirect_to live_feed_path(params[:rest_id])
