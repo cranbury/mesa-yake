@@ -1,19 +1,22 @@
 <h1>
   <%= @rest.name %>
 </h1>
+<% @mesas.each_with_index do |mesa,idx| %>
+  <div class="panel">
+    <div class="submit_inputs">
+      <div class="table_status">
+        <%= image_tag "restaurante/#{params[:id]}/t#{idx}.jpg" %>
+      </div>
+    </div>
+      <div class="cameras">
+        <%= form_tag({action: :create}, multipart: true) do %>
+        <%= label(:img, :Status)%>
+        <%= file_field_tag 'current_status' %>
+        <%= hidden_field_tag 'rest_id', "#{params[:id]}"%>
+        <%= hidden_field_tag 'mesa_id', idx %>
+        <%= submit_tag 'Actualizar' %>
+        <% end %>
+      </div>
 
-
-<%= form_tag({action: :create}, multipart: true) do %>
-  <%= label(:img, :Status)%>
-  <%= file_field_tag 'current_status' %>
-  <%= hidden_field_tag 'rest_id', "#{params[:id]}"%>
-  <%= submit_tag 'Subir' %>
+  </div>
 <% end %>
-
-<div class="">
-  <%= @status %>
-</div>
-
-<div class="table_status">
-    <%= image_tag "restaurante/status.jpg" %>
-</div>
