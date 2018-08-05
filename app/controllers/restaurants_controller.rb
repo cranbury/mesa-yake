@@ -8,4 +8,10 @@ class RestaurantsController < ApplicationController
   def show
       @background_pic = "restaurantpic"
   end
+
+  def menu
+      @background_pic = "restaurantpic"
+      @products = Product.all
+  end
+
 end
