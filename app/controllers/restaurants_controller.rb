@@ -30,4 +30,7 @@ class RestaurantsController < ApplicationController
     redirect_to "#{restaurant_mesa_index_path}/#{mesa_id}"
   end
 
+  def mesas
+    @mesas = Mesa.where(restaurant_id: params[:restaurant_id])
+  end
 end

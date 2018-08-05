@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :restaurants do
     get :kitchen
     get :menu
+    get :mesas
     resources :mesa
     get :open
     post :meal
