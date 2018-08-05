@@ -1,0 +1,17 @@
+<%= form_for @product, url: restaurant_admin_products_path do |f| %>
+    <div class="form-group">
+        <label>Name</label>
+        <input name="product[name]" placeholder="Name" class="form-control" type="text" />
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input name="product[precio]" placeholder="Price" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea name="product[description]" placeholder="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <input value="Create" class="btn btn-success" type="submit" />
+    </div>
+<% end %>

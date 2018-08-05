@@ -1,32 +1,26 @@
 <h2>Products</h2>
-<a href="#" class="btn btn-success">Create</a>
+<a href="<%= new_restaurant_admin_product_path %>" class="btn btn-success">Create</a>
 <table class="table table-striped">
     <thead>
         <tr>
             <th>#</th>
             <th>Name</th>
-            <th>Category</th>
+            <th>Description</th>
             <th>Price</th>
             <th>Status</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Pizza Cheese</td>
-            <td>Pizzas</td>
-            <td>$14,000</td>
-            <td>
-                <span class="badge-secondary badge">Hidden</span>
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Arepa Cheese</td>
-            <td>Arepas</td>
-            <td>3</td>
-            <td>$4,500</td>
-            <td><span class="badge-success badge">Show</span></td>
-        </tr>
+    <tbody
+        <% @products.each do |product|  %>
+            <tr>
+                <td>1</td>
+                <td><%= product.name %></td>
+                <td><%= product.description %></td>
+                <td><%= number_to_currency(product.precio) %></td>
+                <td>
+                    <span class="badge-secondary badge">Hidden</span>
+                </td>
+            </tr>
+        <% end %>
     </tbody>
 </table>
