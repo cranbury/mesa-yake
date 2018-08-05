@@ -5,7 +5,7 @@
         <tr>
             <th>#</th>
             <th>Name</th>
-            <th>Category</th>
+            <th>Description</th>
             <th>Price</th>
             <th>Status</th>
         </tr>
@@ -15,7 +15,7 @@
             <tr>
                 <td>1</td>
                 <td><%= product.name %></td>
-                <td>Blank</td>
+                <td><%= product.description %></td>
                 <td><%= number_to_currency(product.precio) %></td>
                 <td>
                     <span class="badge-secondary badge">Hidden</span>
