@@ -1,0 +1,10 @@
+<div class="main-agileits" id="infoform">
+   <div class="form-w3-agile">
+        <h2>Please Enter Your Table Code</h2>
+        <%= form_for @orden, url: restaurant_ordens_path do |f| %>
+            <input placeholder="Table Code" type="text" name="orden[meal_id]" id="orden_meal_id" value="<%= @orden.meal_id %>">
+            <input type="submit" name="commit" value="Submit" data-disable-with="Submit">
+        </div>
+   <% end %>
+   </div>
+</div>

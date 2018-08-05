@@ -23,3 +23,4 @@ Mesa.create!(restaurant_id: 2, seats: 4, available: true)
 Mesa.create!(restaurant_id: 2, seats: 4, available: true)
 Mesa.create!(restaurant_id: 3, seats: 4, available: true)
 Mesa.create!(restaurant_id: 3, seats: 4, available: true)
+
