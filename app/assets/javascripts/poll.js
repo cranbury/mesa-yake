@@ -14,7 +14,7 @@ function poll() {
 
 function updateRestaurants(){
   $.each(restaurantAvailability, function(index, value) {
-    $("#res" + index + "-available").text("Available: " + value.tablesAvailable);
+    $("#res" + index + "-available").text("Tables Available: " + value.tablesAvailable);
   }); 
 }
 
