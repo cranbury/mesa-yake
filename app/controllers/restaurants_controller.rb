@@ -25,12 +25,7 @@ class RestaurantsController < ApplicationController
   def meal
     mesa_id = params[:mesa_id]
     mesa = Mesa.find_by(id: mesa_id)
-<<<<<<< HEAD
     mesa.available= true
-=======
-    mesa.available = true
->>>>>>> a1183e9f6c3004443466c049fee01d3293cbeffa
-    mesa.save
 
     Meal.create(mesa_id:mesa_id)
     redirect_to "#{restaurant_mesa_index_path}/#{mesa_id}"
