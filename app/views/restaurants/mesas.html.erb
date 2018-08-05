@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col pt-2">
+            <% @mesas.each do |mesa|  %>
+                <a href="/restaurants/<%= @restaurant_id %>/mesa/<%= mesa.id %>">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"><%= mesa.name %>
+                                <% if mesa.abierto %>
+                                    <span class="badge badge-success">Free</span>
+                                <% else %>
+                                    <span class="badge badge-danger">Full</span>
+                                <% end %>
+                            </h4>
+                            <div class="card-body">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            <% end %>
+        </div>
+    </div>
+</div>
