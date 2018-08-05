@@ -1,4 +1,5 @@
-<div class="container bg-dark">
+<%= render "layouts/navbar" %>
+<div class="container">
     <div class="row">
         <div class="col-12 pt-2">
             <% @restaurants.each do |restaurant|  %>
@@ -9,12 +10,11 @@
              <div class="jumbotron" align="center" style="background:rgba(0,0,0,.26)">
               <h1 class="display-4" id="title"><%= restaurant.name %></h1>
                <h4 class="desc"><%= restaurant.description %></h4>
-               
-               <a href="/restaurants/<%= restaurant.id %>/open" class="btn btn-light">Order Food</a>
-               <a href="/restaurants/<%= restaurant.id %>/menu" class="btn btn-outline-light">See The Menu</a>
                  <h5 id="res<%= restaurant.id %>-available" class="text-light mt-2">
                      Tables Available: 0
                  </h5>
+               <a href="/restaurants/<%= restaurant.id %>/open" class="btn btn-danger">Order Food</a>
+               <a href="/restaurants/<%= restaurant.id %>/menu" class="btn btn-warning">View Menu</a>
              </div>
             </div>
             </a>

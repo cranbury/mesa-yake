@@ -1,11 +1,15 @@
 class LiveFeedController < ApplicationController
   def index
     @restaurants = Restaurant.all
+    @background_pic = "blackpic"
   end
+
   def show
     @rest = Restaurant.find(params[:id])
     @mesas = @rest.mesas
+    @background_pic = "blackpic"
   end
+
   def create
     puts params
     @rest = Restaurant.find(params[:rest_id])

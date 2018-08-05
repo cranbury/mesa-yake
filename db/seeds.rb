@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Restaurant.find_or_create_by(name: "Jimmy's", description:"Good Meal", img: "https://media-cdn.tripadvisor.com/media/photo-s/0b/5c/ac/47/jimmy-s-restaurant.jpg")
 Restaurant.find_or_create_by(name: "Eternal Spring", description:"Making Traditional HongKong Food Since 1998", img:"https://wallpapercave.com/wp/wp3053211.jpg")
-Restaurant.find_or_create_by(name: "Cambur con Pan", description:"Comida Venezolana", img:"https://bde04f90fcbcc7b99af9-a4cf3e88ec567f5b6c6819f1d482f77f.ssl.cf1.rackcdn.com/3_101386_r_0.jpg")
+Restaurant.find_or_create_by(name: "Jimmy's", description:"The Best Ajiaco In Bogota", img: "http://heneedsfood.com/wp-content/uploads/2015/11/Ajiaco-Colombiano-01-1200x798.jpg")
+Restaurant.find_or_create_by(name: "Cambur con Pan", description:"Comida Venezolana", img:"https://steemitimages.com/DQmNkV4EqR73eQjZ1Zo4jXDyL9v8Vhsg5iWuqWWV3xo85i5/venezuelan-shredded-beef.jpg")
 
 Product.find_or_create_by(restaurant_id: 2, name:"Egg Roll With Pork 春卷", description: "a", precio: 8000, image: "http://www.amandatastes.com/wp-content/uploads/2017/05/%E8%B6%8A%E5%8D%97%E6%98%A5%E5%8D%B7.jpg")
 Product.find_or_create_by(restaurant_id: 2, name:"Dimsum 点心", description:"a", precio: 8000, image: "http://metropop-img.s3-website-ap-southeast-1.amazonaws.com/750/pop/uploads/2016/12/2-3.jpg")
