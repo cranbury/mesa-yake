@@ -20,4 +20,3 @@ Product.find_or_create_by(restaurant_id: 2, name:"Mango Sago Pomelo Dessert æ¨æ
 
 Mesa.find_or_create_by(restaurant_id: 1,name: "Table 1 (Lobby)", seats: 1, abierto:true)
 Mesa.find_or_create_by(restaurant_id: 1,name: "Table 2 (Bar)",  seats: 1, abierto:false)
-

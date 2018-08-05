@@ -7,17 +7,16 @@
                 </div>
             </form>
             <% @restaurants.each do |restaurant|  %>
+            <a href="/restaurants/<%= restaurant.id%>">
              <div style="background: url(<%= restaurant.img %>) no-repeat center center;
                 background-size: auto auto;
             background-size: cover;">
-                 
-             
              <div class="jumbotron" align="center" style="background:rgba(0,0,0,.26)">
-              <h1 class="display-4" id="title"><%= restaurant.name %></h1>
-               <h4 class="desc"><%= restaurant.description %></h4>
-               <a href="/restaurants/<%= restaurant.id %>/menu"><button class="ctrl-standard typ-subhed fx-sliderIn">Order Food</button></a>
+                  <h1 class="display-4" id="title"><%= restaurant.name %></h1>
+                   <h4 class="desc"><%= restaurant.description %></h4>
              </div>
             </div>
+            </a>
             <% end %>
         </div>
     </div>
