@@ -18,6 +18,7 @@ Product.find_or_create_by(restaurant_id: 2, name:"Grilled Pork Dumpling 锅贴",
 Product.find_or_create_by(restaurant_id: 2, name:"Bubble Tea 珍珠奶茶", description: "d", precio: 5000, image: "https://farm5.staticflickr.com/4728/38520763804_fe204eaf59_b.jpg")
 Product.find_or_create_by(restaurant_id: 2, name:"Mango Sago Pomelo Dessert 杨枝甘露", description: "d", precio: 5000, image: "https://i1.hdslb.com/bfs/archive/ed150d19d3f9b59c8bbf3dfe5c14b76ea1802012.jpg")
 
+
 Mesa.all.destroy_all
 
 Mesa.create!(restaurant_id: 1, seats: 4, available: true)
@@ -27,3 +28,4 @@ Mesa.create!(restaurant_id: 2, seats: 4, available: true)
 Mesa.create!(restaurant_id: 2, seats: 4, available: true)
 Mesa.create!(restaurant_id: 3, seats: 4, available: true)
 Mesa.create!(restaurant_id: 3, seats: 4, available: true)
+
