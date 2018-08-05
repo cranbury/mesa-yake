@@ -35,4 +35,15 @@ class RestaurantsController < ApplicationController
   def mesas
     @mesas = Mesa.where(restaurant_id: params[:restaurant_id])
   end
+
+  def availability
+    res = {}
+    Restaurant.all.each do |r|
+      res[r.id] = {}
+      res[r.id]["tablesAvailable"] = r.mesas.reduce(0) do |total, m|
+        total += m.available ? 1 : 0
+      end
+    end
+    render json: {restaurants: res}
+  end
 end

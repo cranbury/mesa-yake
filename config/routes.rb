@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :live_feed
 
   resources :restaurants do
+    get :availability, on: :collection 
     get :kitchen
     get :menu
     get :mesas
