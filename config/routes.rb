@@ -5,14 +5,13 @@ Rails.application.routes.draw do
   resources :live_feed
 
   resources :restaurants do
-    resources :ordens do
-      resources :products
-    end
     get :availability, on: :collection 
     get :kitchen
     get :menu
     get :mesas
-    resources :mesa
+    resources :mesa do
+      resources :products
+    end
     get :open
     post :meal
     namespace :admin do

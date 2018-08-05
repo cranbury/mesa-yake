@@ -1,12 +1,20 @@
-<div class="jumbotron" id="home" align="center">
- <h1 class="display-10" id="title"><%= @restaurant.name %></h1>
+<div class="jumbotron" id="" align="center">
+ <h1 class="display-10" id=""><%= @restaurant.name %></h1>
  <div class="row">
-    <% @products.each do |product|%>
-    <div class="col-6">
-       <h6 class="display-10" id="title"><%=product.name%></h6>
-       <h6>Price:<%=product.precio%></h6>
-       <img src="<%=product.image%>" width="40%">
-   </div>
+    <div class="col-12">
+     <% @products.each do |product|%>
+      <%= form_for @product, url: restaurant_mesa_products_path do |f| %>
+       <div class="card" style="width: 50%; display:block; margin: 0 auto;">
+        <img class="card-img-top" src="<%=product.image%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%=product.name%></h5>
+          <p class="card-text"><%= number_to_currency(product.precio) %></p>
+          <input type="hidden" value="<%=product.id%>" name="product_id"/>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Order</button>
+        </div>
+      </div>
+      <% end %>
    <% end %>
+    </div>
 </div>
 </div>

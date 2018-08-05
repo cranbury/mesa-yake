@@ -1,14 +1,13 @@
-<a class="btn btn-success" href="<%= "#{restaurant_mesa_path}/products" %>">Agregar</a>
 <div class="container">
     <div class="row">
         <div class="col pt-2">
             <% @products.each do |product|  %>
-                <a href="#">
+                <a href="/restaurants/<%= @restaurant_id %>/product/<%= product.id %>">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title"><%= product.product.name %></h4>
+                            <h4 class="card-title"><%= product.name %></h4>
                             <div class="card-body">
-                                x<%= product.quantity %>
+                                
                             </div>
                         </div>
                     </div>
