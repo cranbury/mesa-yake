@@ -8,4 +8,6 @@ class ProductsController < ApplicationController
       @background_pic = "restaurantpic"
       @products = Product.all
    end
+
+   
 end
