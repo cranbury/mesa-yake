@@ -7,7 +7,7 @@
 <% @restaurants.each do |rest| %>
   <tr>
     <td><%=rest.id%></td>
-    <td><%=rest.name%></td>
+    <td><%= link_to "#{rest.name}", live_feed_path(rest.id) %></td>
   </tr>
 <% end %>
 </table>

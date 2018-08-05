@@ -21,3 +21,11 @@ Product.find_or_create_by(restaurant_id: 2, name:"Mango Sago Pomelo Dessert æ¨æ
 Mesa.all.destroy_all
 Mesa.create(restaurant_id: 1,name: "Table 1 (Lobby)", seats: 1, available: true)
 Mesa.create(restaurant_id: 1,name: "Table 2 (Bar)",  seats: 1, available: false)
+<<<<<<< HEAD
+=======
+
+Mesa.create!(restaurant_id: 2, seats: 4, available: true)
+Mesa.create!(restaurant_id: 2, seats: 4, available: true)
+Mesa.create!(restaurant_id: 3, seats: 4, available: true)
+Mesa.create!(restaurant_id: 3, seats: 4, available: true)
+>>>>>>> 4ddf9c1b9759e707db78dc8e9046535cb22266fa

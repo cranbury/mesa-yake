@@ -44,6 +44,6 @@ class RestaurantsController < ApplicationController
         total += m.available ? 1 : 0
       end
     end
-    render json: {restaurants: res.to_json}
+    render json: {restaurants: res}
   end
 end
