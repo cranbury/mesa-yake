@@ -1,0 +1,13 @@
+<h1>Restaurantes</h1>
+<table>
+  <th>
+    <td>N</td>
+    <td>Name</td>
+  </th>
+<% @restaurants.each do |rest| %>
+  <tr>
+    <td><%=rest.id%></td>
+    <td><%=rest.name%></td>
+  </tr>
+<% end %>
+</table>

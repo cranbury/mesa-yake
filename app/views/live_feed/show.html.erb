@@ -1,0 +1,19 @@
+<h1>
+  <%= @rest.name %>
+</h1>
+
+
+<%= form_tag({action: :create}, multipart: true) do %>
+  <%= label(:img, :Status)%>
+  <%= file_field_tag 'current_status' %>
+  <%= hidden_field_tag 'rest_id', "#{params[:id]}"%>
+  <%= submit_tag 'Subir' %>
+<% end %>
+
+<div class="">
+  <%= @status %>
+</div>
+
+<div class="table_status">
+    <%= image_tag "restaurante/status.jpg" %>
+</div>
