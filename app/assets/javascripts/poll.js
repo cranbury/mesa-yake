@@ -19,4 +19,4 @@ function updateRestaurants(){
 }
 
 // initial call
-setTimeout(poll, 1000);
+//setTimeout(poll, 1000);

@@ -1,22 +1,23 @@
-<h1>
-  <%= @rest.name %>
-</h1>
-<% @mesas.each_with_index do |mesa,idx| %>
-  <div class="panel">
-    <div class="submit_inputs">
-      <div class="table_status">
-        <%= image_tag "restaurante/#{params[:id]}/t#{idx}.jpg" %>
-      </div>
-    </div>
-      <div class="cameras">
-        <%= form_tag({action: :create}, multipart: true) do %>
-        <%= label(:img, :Status)%>
-        <%= file_field_tag 'current_status' %>
-        <%= hidden_field_tag 'rest_id', "#{params[:id]}"%>
-        <%= hidden_field_tag 'mesa_id', idx %>
-        <%= submit_tag 'Actualizar' %>
-        <% end %>
-      </div>
-
-  </div>
-<% end %>
+<div class="jumbotron" id="home" align="center">
+   <h1 class="display-10" id="title"><%= @rest.name %></h1>
+   <div class="row panel">
+    <% @mesas.each do |mesa| %>
+      <div class="col-8 submit_inputs">
+          <div class="table_status">
+            <%= image_tag "restaurante/#{params[:id]}/t#{mesa.id}.jpg", :class => "img_preview"%>
+          </div>
+       </div>
+       <div class="col-4 cameras">
+            <h4> <%= mesa.available ? 'Mesa Disponible' : 'Mesa Ocupada'%></h4>
+            <%= form_tag({action: :create}, multipart: true) do %>
+            <%= label(:img, 'Subir foto')%>
+            <%= label(:img, "Status: #{mesa.available ? 'Available' : 'Not Available' }")%>
+            <%= file_field_tag 'current_status' %>
+            <%= hidden_field_tag 'rest_id', "#{params[:id]}"%>
+            <%= hidden_field_tag 'mesa_id', mesa.id %>
+            <%= submit_tag 'Actualizar', :class => "btn btn-outline-dark" %>
+            <% end %>
+       </div>
+    <% end %>
+   </div>
+</div>

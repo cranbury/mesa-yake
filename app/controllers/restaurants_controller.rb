@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
+    @background_pic = "blackpic"
   end
 
   def show
@@ -25,7 +26,8 @@ class RestaurantsController < ApplicationController
   def meal
     mesa_id = params[:mesa_id]
     mesa = Mesa.find_by(id: mesa_id)
-    mesa.available= true
+    mesa.available = true
+    
     mesa.save
 
     Meal.create(mesa_id:mesa_id)
