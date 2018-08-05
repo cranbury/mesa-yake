@@ -1,0 +1,2 @@
+module LiveFeedHelper
+end

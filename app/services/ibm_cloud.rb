@@ -13,7 +13,6 @@ class IbmCloud
     payload = {images_file: Faraday::UploadIO.new(File.open(Rails.root + img_path), 'image/jpeg'),
               # classifier_ids: "table_status_1980112004"
                owners:"me"}
-    
     response = conn.post "/visual-recognition/api/v3/classify?version=2018-03-19", payload
     JSON.parse(response.body)
   end
