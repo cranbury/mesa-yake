@@ -1,0 +1,18 @@
+<div class="jumbotron" id="home" align="center">
+ <h1 class="display-10" id="title">Eternal Spring</h1>
+ <h1 class="display-10" id="title">永春园</h1>
+ <div class="row">
+    <div class="col-6">
+       <img id="productimage" src="<%=product.image%>">
+   </div>
+   <div class="col-6">
+      <h3 class="display-10" id="title"><%=product.name%></h3>
+      <h3>Price:<%=product.precio%></h3>
+      <%= form_for product do |f| %>
+      <input placeholder="Number" type="text" name="product[number]" id="product_number" value="<%= product.number %>">
+      <input type="submit" name="commit" value="Submit" data-disable-with="Submit">
+  </div>
+<% end %>
+   </div>
+</div>
+</div>
