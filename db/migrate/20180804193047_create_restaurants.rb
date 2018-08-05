@@ -2,11 +2,13 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
   def change
     create_table :restaurants do |t|
       t.string :name
-
+      t.string :description
+      t.string :img
       t.timestamps
     end
 
     create_table :mesas do |t|
+      t.string :name
       t.integer :restaurant_id
       t.integer :seats
       t.boolean :abierto
@@ -31,7 +33,8 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.decimal :precio
-
+      t.integer :restaurant_id
+      
       t.timestamps
     end
 
