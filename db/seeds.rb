@@ -19,13 +19,7 @@ Product.find_or_create_by(restaurant_id: 2, name:"Bubble Tea 珍珠奶茶", desc
 Product.find_or_create_by(restaurant_id: 2, name:"Mango Sago Pomelo Dessert 杨枝甘露", description: "d", precio: 5000, image: "https://i1.hdslb.com/bfs/archive/ed150d19d3f9b59c8bbf3dfe5c14b76ea1802012.jpg")
 
 Mesa.all.destroy_all
-Mesa.create(restaurant_id: 1,name: "Table 1 (Lobby)", seats: 1, available: true)
-Mesa.create(restaurant_id: 1,name: "Table 2 (Bar)",  seats: 1, available: false)
-<<<<<<< HEAD
-=======
-
 Mesa.create!(restaurant_id: 2, seats: 4, available: true)
 Mesa.create!(restaurant_id: 2, seats: 4, available: true)
 Mesa.create!(restaurant_id: 3, seats: 4, available: true)
 Mesa.create!(restaurant_id: 3, seats: 4, available: true)
->>>>>>> 4ddf9c1b9759e707db78dc8e9046535cb22266fa

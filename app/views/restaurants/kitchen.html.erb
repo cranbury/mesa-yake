@@ -1,1 +1,43 @@
-<h2>Kitchen</h2>
+
+  <div class="row order">
+  <%
+  @array_orders=[{:table=> 1  ,:products=> ["Egg Roll With Pork","Grilled Pork Dumpling"], :time=>4 },
+{:table=> 2  ,:products=> ["Bubble Tea","Curry Beef Stew Over Rice"], :time=>6 },
+{:table=> 3  ,:products=> ["Egg Roll With Pork","Dimsum"], :time=>5 }]
+   @array_orders.each do |order|  %>
+
+      <div class="col-6" align="center">
+
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-header"> Mesa
+                    <%= order[:table] %>
+              </div>
+                <div class="card-body">
+                  <h5 class="card-title">Pedidos</h5>
+                  <% order[:products].each do |product|
+                  %>
+
+
+
+                  <li><%= product %></li>
+                   <% end %>
+                    <div class="row ow">
+                      <div class="col-12">
+                        <p>   <%= order[:time] %> min de demora</p>
+                      </div>
+                      <div class="col-12" align="center">
+
+
+                  <div class="card-footer bg-transparent border-success" align="center">
+                        <button type="button" class="btn btn-secondary btn-sm">Orden completada</button>
+                      </div>
+
+                    </div>
+                    </div>
+                      </div>
+
+                </div>
+            </div>
+
+     <% end %>
+       </div>
