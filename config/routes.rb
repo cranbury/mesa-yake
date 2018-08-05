@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :restaurants do
     get :kitchen
     get :menu
+    resources :mesa
+    get :open
+    post :meal
     namespace :admin do
       resources :orders
       resources :products
